@@ -23,11 +23,13 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+      # No registry-url here: it writes an .npmrc whose _authToken=${NODE_AUTH_TOKEN}
+      # (unset) collides with semantic-release's own auth → 401. semantic-release
+      # owns the registry (package.json publishConfig) and auth (NPM_TOKEN).
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-          registry-url: https://npm.pkg.github.com
       - run: npm ci
       - run: npm run build
       - run: npm test
