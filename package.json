@@ -1,7 +1,7 @@
 {
   "name": "@ozika-music/musicxml",
   "version": "1.0.0",
-  "description": "A comprehensive MusicXML 4.0 parser written in TypeScript",
+  "description": "A comprehensive, strongly-typed MusicXML 4.0 parser and serializer for TypeScript — reads and writes both uncompressed .musicxml and compressed .mxl documents.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,7 +9,12 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    }
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
   },
   "files": [
     "dist"
@@ -30,11 +35,18 @@
   },
   "keywords": [
     "musicxml",
+    "mxl",
     "music",
     "notation",
+    "sheet-music",
+    "score",
+    "tablature",
     "parser",
-    "xml"
+    "serializer",
+    "xml",
+    "typescript"
   ],
+  "author": "Ozika",
   "license": "MIT",
   "repository": {
     "type": "git",
