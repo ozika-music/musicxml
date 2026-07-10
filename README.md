@@ -151,8 +151,9 @@ commit in a pull request.
 Releases are fully automated by [semantic-release][semrel]: on every merge to
 `main`, the commit history determines the next [SemVer][semver] version
 (`feat:` → minor, `fix:` → patch, `feat!:`/`BREAKING CHANGE:` → major), which is
-then published to GitHub Packages, tagged, released with generated notes, and
-recorded in `CHANGELOG.md`. No manual version bumps.
+then published to GitHub Packages, tagged, and released with generated notes as
+a [GitHub Release](https://github.com/ozika-music/musicxml/releases). No manual
+version bumps.
 
 ## Specifications
 
